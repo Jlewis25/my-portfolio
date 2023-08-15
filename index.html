@@ -1,12 +1,504 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+  <!-- Image Formatting -->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    .rows {
+      display: flex;
+      vertical-align: bottom;
+    }
+
+    .col {
+      flex: 25%;
+      padding: 35px;
+      vertical-align: bottom;
+    }
+
+    /* Contact Images */
+    .contact{
+      display: flex;
+      justify-content: center;
+      /* padding: 5px; */
+    }
+
+    .picOne{
+      padding: 15px;
+
+    }
+    .picTwo{
+      padding: 15px;
+
+    }
+
+    /* Video Formatting */
+    .vid2{
+      display: flex;
+      justify-content: center;
+    }
+
+    .vid3{
+      display: flex;
+      justify-content: center;
+    }
+    /* Hovercraft Image Formatting */
+    .hovercraftRow {
+      display: flex;
+      vertical-align: bottom;
+    }
+
+    .hovercraftCol {
+      flex: 33.33%;
+      padding: 100px;
+      vertical-align: bottom;
+    }
+    /* Text Formatting */
+        .box {
+      float: left;
+      width: 33.33%;
+      padding: 50px;
+      font-size: large;
+    }
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    /* Learn More Button Styling For Stair Climbing Robot*/
+    .button {
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      border-radius: 12px;
+    }
+
+    .button2 {
+      background-color: white;
+      color: black;
+      border: 2px solid #1172e0;
+    }
+
+    .button2:hover {
+      background-color: #1172e0;
+      color: white;
+    }
+
+    #more {display: none;}
+
+    .Btn{
+      margin: 0;
+      position: absolute;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    /* Learn More Button Styling For Toy Hovercraft*/
+    .button3 {
+      background-color: white;
+      color: black;
+      border: 2px solid #1172e0;
+    }
+
+    .button3:hover {
+      background-color: #1172e0;
+      color: white;
+    }
+
+    #moreHover {display: none;}
+
+    .BtnHover{
+      margin: 0;
+      position: absolute;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    </style>
+    <!-- End Image Formatting -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="portfolioAssets/img/WebsiteLogo.png" rel="icon">
+  <!-- <link href="portfolioAssets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="portfolioAssets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="portfolioAssets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="portfolioAssets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="portfolioAssets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="portfolioAssets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="portfolioAssets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="portfolioAssets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: BizLand - v3.7.0
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
+
 <body>
-    <p>My Portfolio</p>
+
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">Portfolio<span>.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="portfolioAssets/img/WebsiteLogo.png" alt=""></a> -->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">Mechanical Gripper</a></li>
+          <li><a class="nav-link scrollto" href="#services">Stair Climbing Robot</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Toy Hovercraft</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#team">Astronomy</a></li> -->
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h1>My Name is <span><em>James Lewis</em></span><br>An Engineering Student <br> at The University of Waterloo <br> Welcome to <span><em>My Portfolio!</em></span></h1>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Tech Section ======= -->
+    <section id="about" class="about section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Mechanical Gripper</h2>
+          <h3>Find Out More <span>About My Mechanical Gripper</span></h3>
+          <!-- <p>Read Everything Mechanical Gripper Here:</p> -->
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <img src="portfolioAssets/img/technology.jfif" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <h3>Coming Soon...</h3>
+            <p class="fst-italic">
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Tech Section -->
+
+    <!-- ======= Science Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Stair Climbing Robot</h2>
+          <h3>Find Out More <span>About My Stair Climbing Robot</span></h3>
+          <!-- <p>Read Everything Science Here:</p> -->
+        </div>
+        <div class="row">
+          <!-- video formatting -->
+          <div class="vid2">
+            <video width="640" height="360" controls loop>
+              <!-- Original Video Size (1920 X 1080) -->
+            <source src="portfolioAssets/img/Robot.mp4" type="video/mp4">
+            <!-- <source src="movie.ogg" type="video/ogg"> -->
+            Your browser does not support the video tag.
+            </video>
+            </div>
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+
+              <br>
+            <!-- Picture Format -->
+            <div class="rows">
+              <div class="col">
+                <img src="portfolioAssets/img/CADClamp.png" alt="CAD Model of Clamp" width="290" height="274">
+                                                    <!-- Original Image Scaled Down by 3 (870 x 823) -->
+              </div>
+              <div class="col">
+                <img src="portfolioAssets/img/PrintedClamp.jpg" alt="3D Printed Clamp" width="251" height="249">
+                                                    <!-- Original Image Scaled Down by 11 (2762 x 2734) -->
+              </div>
+              <div class="col">
+                <img src="portfolioAssets/img/ClampRobot.jpg" alt="Clmap On Robot" width="252" height="336">
+                                                    <!-- Original Image Scaled Down by 12 (3024 x 4032) -->
+              </div>
+              <div class="col">
+                <img src="portfolioAssets/img/SCRobot.jpg" alt="Robot" width="252" height="336">                
+                                                    <!-- Original Image Scaled Down by 12 (3024 x 4032) -->
+              </div>
+            </div>
+            <!-- End Picture Format -->
+          </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+              <p class="fst-italic">
+            </div>
+          </div>
+            <!-- Text Formatting -->
+            <div class="clearfix">
+
+              <p style="font-size: larger;">A team of three mechanical engineering students and I designed, built, programmed, and tested
+                a LEGO EV3 robot to climb stairs. I designed a 3D printed support for the robot using drafting,
+                measuring, and SolidWorks skills. The robot was programmed in RobotC to drive, identify stairs,
+                stabilize, and move the elevator/back stilt vertically to climb stairs. Testing was conducted on
+                various stairs, with the front elevator system occasionally stuck.</p><br>
+              <span id="dots"></span>
+              <span id="more">
+              <div class="box">
+                <p>The first approach towards designing our robot was to outline a couple functional requirements, non-
+                  functional requirements, and constraint requirements that our robot had to meet. We then took these
+                  design characteristics and made an engineering design specification which outlined verification methods
+                  and quantified some of the characteristics to ensure they were met. We then created three conceptual
+                  designs and used a decision making matric to decide on the best design.</p>
+              </div>
+              <div class="box">
+                <p>The design chosen included a rear stilt with two wheels which moves vertically by a worm gear, rack and pinion system, a front clamp
+                  with an ultrasonic sensor, a rubber band and string spool elevator system, two drive wheels attached to
+                  the main body, and a gyroscope to help stabilize the robot.The design featured a 3D printed support that secures the back stilt to the main body and ensures the
+                  rack fully engages with the pinion. To design this part, I took measurements of the back stilt and of
+                  various LEGO pieces using a vernier caliper. Then I made some quick sketches to get an idea of what the
+                  part should look like and outlined some of the measurements.</p>
+              </div>
+              <div class="box">
+                  <p> Using the measurements and sketches I 3D modeled the part in SolidWorks and 3D printed it using ABS (Acrylonitrile butadiene styrene)
+                    filament.The robot was programmed in RobotC to drive, sense stairs, stabilize, move the elevator, and back stilt,
+                    and many more functions. We did many phases of testing on different types of stairs with different
+                    heights and surfaces to ensure that the robot could consistently climb stairs. The robot was able to
+                    continuously identify a stair and climb the stair. The robot worked well except for the weak front elevator
+                    system that occasionally got stuck moving up, as the elastic bands lacked the strength to pull the front
+                    clamp up.</p>
+              </div>
+              </span>
+              <div class="Btn">
+                <button class="button button2" onclick="myFunction()" id="myBtn">Learn more</button>
+                </div>
+              <!-- End Text Formatting -->
+            </div>
+      </div>
+    </section><!-- End Science Section -->
+
+    <!-- ======= Toy Hovercraft Section ======= -->
+    <section id="portfolio" class="about section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Toy Hovercraft</h2>
+          <h3>Find Out More <span>About My Toy Hovercraft</span></h3>
+          <!-- <p>Read Everything Animals Here:</p> -->
+        </div>
+
+        <div class="row">
+          <!-- video formatting -->
+          <div class="vid3">
+            <video width="270" height="480" controls loop>
+              <!-- Original Video Size (1080 X 1920) -->
+            <source src="portfolioAssets/img/Hovercraft.mp4" type="video/mp4">
+            <!-- <source src="movie.ogg" type="video/ogg"> -->
+            Your browser does not support the video tag.
+            </video>
+            </div>
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+              <br>
+            <!-- Picture Format -->
+            <div class="rows">
+              <div class="col">
+                <img src="portfolioAssets/img/Hovercraft1.0.jpg" alt="First Hovercraft Prototype" width="370" height="237">
+                                                                <!-- Original Image Scaled Down by 8 (2956 x 1895) -->
+              </div>
+              <div class="col">
+                <img src="portfolioAssets/img/HovercraftBottom.jpg" alt="Bottom of Hovercraft" width="302" height="403">
+                                                                <!-- Original Image Scaled Down by 10 (3024 x 4032)-->
+              </div>
+              <div class="col">
+                <img src="portfolioAssets/img/HovercraftTop.jpg" alt="Final Design of Hovercraft" width="364" height="253">
+                                                                <!-- Original Image Scaled Down by 7 (2546 x 2528) -->
+              </div>
+            </div>
+            <!-- End Picture Format -->
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <p class="fst-italic">
+              </div>
+          </div>
+          <!-- Text Formatting -->
+          <div class="clearfix">
+
+            <p style="font-size: larger;">A group of three mechanical engineering students and I designed and built a toy hovercraft,
+            focusing on weight reduction and air trapping. The final design, without a back fan and garbage
+            bag, improved hovering, and movement across flat surfaces. Despite flaws like heavy fans and
+            poor circuits, the experience provided valuable teamwork and learning.</p>
+            <span id="dotsHover"></span>
+            <span id="moreHover">
+            <div class="box">
+              <p>To the left is the first prototype of the hovercraft which features 2 pc fans powered each by a 9-volt battery,
+                two pieces of rectangular Styrofoam, a garbage bag, and duct tape. The piece of Styrofoam with the fan
+                in it is the base while the bottom piece has a large rectangle cut into it and with the garbage bag (which
+                also has a rectangular shaped hole in it) it acts as a skirt which helps trap a cushion of air under the craft.</p>
+            </div>
+            <div class="box">
+              <p>Unfortunately, the first prototype did not hover as it was too heavy, and air was not being trapped under
+                the craft effectively. So, we went back to the drawing board and came up with what ended up being our
+                last design. The toy Hovercraft features the same design as the first prototype without the back fan and
+                no garbage bag. In doing so the weight was reduced and the trapping of air was improved. This meant
+                sacrificing the idea of propelling it forwards but we were more focused on having the craft hover.</p>
+            </div>
+            <div class="box">
+                <p> Also, we connected two 9V batteries in series to get 18V and a higher fan speed thus more air.
+                  Although the batteries drained faster, and the hovercraft was unable to propel itself forwards. The toy
+                  hovercraft was able to hover and move across flat surfaces with little friction. Though the design has
+                  many flaws such as fans that were too large/heavy and a poor circuit, it was a good exposure to
+                  designing and building a mechanical system in a team and a great learning experience.</p>
+            </div>
+            </span>
+            <br>
+            <div class="BtnHover">
+              <button class="button button3" onclick="myFunctionHover()" id="myBtnHover">Learn more</button>
+              </div>
+            <!-- End Text Formatting -->
+          </div>
+      </div>
+    </section><!-- End Animal Section -->
+
+    <!-- ======= Astronomy Section ======= -->
+    <!-- <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Astronomy</h2>
+          <h3>Find Out More <span>About Astronomy</span></h3>
+          <p>Read Everything Astronomy Here:</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <img src="portfolioAssets/img/astronomy.jfif" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <h3>Blogs</h3>
+            <p class="fst-italic">
+          </div>
+        </div>
+
+      </div>
+    </section> -->
+    <!-- End Astronomy Section -->
+
+    <!-- ======= Sport Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+          <h2>Contact</h2>
+          <h3>Get in Contact <span>With Me</span></h3>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <p class="fst-italic">
+          </div>
+            <!-- Picture Format -->
+            <div class="contact">
+              <div class="picOne">
+                <a href="mailto:jr2lewis@uwaterloo.ca"><img src="portfolioAssets/img/Email.jpg" alt="3D Printed Clamp" width="70" height="70"></a>
+                                                    <!-- Original Image Scaled Down by 4 (199 x 199) -->
+              </div>
+              <div class="picTwo">
+                <a href="https://www.linkedin.com/in/james-robert-lewis/"><img src="portfolioAssets/img/Linkedin.jpg" alt="3D Printed Clamp" width="70" height="70"></a>
+                                                    <!-- Original Image Scaled Down by 4 (194 x 195) -->
+              </div>
+            </div>
+            <!-- End Picture Format -->
+        </div>
+      </div>
+    </section><!-- End sport Section -->
+
+  </main><!-- End #main -->
+
+  <!-- Vendor JS Files -->
+  <script src="portfolioAssets/vendor/purecounter/purecounter.js"></script>
+  <script src="portfolioAssets/vendor/aos/aos.js"></script>
+  <script src="portfolioAssets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="portfolioAssets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="portfolioAssets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="portfolioAssets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="portfolioAssets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="portfolioAssets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="portfolioAssets/js/main.js"></script>
+  <script>
+    //Stair Climbing Robot
+    function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Learn more"; 
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Learn less"; 
+        moreText.style.display = "inline";
+      }
+    }
+    //Toy Hovercrfat
+    function myFunctionHover() {
+      var dotsHover = document.getElementById("dotsHover");
+      var moreTextHover = document.getElementById("moreHover");
+      var btnTextHover = document.getElementById("myBtnHover");
+
+      if (dotsHover.style.display === "none") {
+        dotsHover.style.display = "inline";
+        btnTextHover.innerHTML = "Learn more"; 
+        moreTextHover.style.display = "none";
+      } else {
+        dotsHover.style.display = "none";
+        btnTextHover.innerHTML = "Learn less"; 
+        moreTextHover.style.display = "inline";
+      }
+    }
+  </script>
+
 </body>
+
 </html>
