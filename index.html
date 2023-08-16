@@ -15,12 +15,12 @@
     .robotImg {
       float: left;
       width: 25%;
-      padding: 5px;
+      padding: 20px;
     }
     .HovercraftImg {
       float: left;
       width: 33.33%;
-      padding: 5px;
+      padding: 20px;
     }
     
     /* Contact Images */
@@ -40,13 +40,10 @@
     }
 
     /* Video Formatting */
-    .vid2{
-      display: flex;
-      justify-content: center;
-    }
-    .vid3{
-      display: flex;
-      justify-content: center;
+    .vid{
+      float: left;
+      width: 100%;
+      padding: 100px;
     }
     /* Hovercraft Image Formatting */
     .hovercraftRow {
@@ -231,13 +228,14 @@
         </div>
         <div class="row">
           <!-- video formatting -->
-          <div class="vid2">
-            <video width="640" height="360" controls loop>
-              <!-- Original Video Size (1920 X 1080) -->
-            <source src="portfolioAssets/img/Robot.mp4" type="video/mp4">
-            <!-- <source src="movie.ogg" type="video/ogg"> -->
-            Your browser does not support the video tag.
-            </video>
+          <div class="rows">
+            <div class="vid">
+              <video controls loop>
+                <!-- Original Video Size (1920 X 1080) to (640 x 360) -->
+              <source src="portfolioAssets/img/Robot.mp4" type="video/mp4" style="width:100%">
+              Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
             <br><br>
             <!-- Picture Format -->
@@ -316,19 +314,19 @@
         <div class="section-title">
           <h2>Toy Hovercraft</h2>
           <h3>Find Out More <span>About My Toy Hovercraft</span></h3>
-          <!-- <p>Read Everything Animals Here:</p> -->
         </div>
 
         <div class="row">
           <!-- video formatting -->
-          <div class="vid3">
-            <video width="270" height="480" controls loop>
-              <!-- Original Video Size (1080 X 1920) -->
-            <source src="portfolioAssets/img/Hovercraft.mp4" type="video/mp4">
-            <!-- <source src="movie.ogg" type="video/ogg"> -->
-            Your browser does not support the video tag.
-            </video>
+          <div class="rows">
+            <div class="vid">
+              <video controls loop>
+                <!-- Original Video Size (1080 X 1920) to (270 x 480)-->
+              <source src="portfolioAssets/img/Hovercraft.mp4" type="video/mp4" style="width:100%">
+              Your browser does not support the video tag.
+              </video>
             </div>
+          </div>
               <br><br>
             <!-- Picture Format -->
             <div class="rows">
