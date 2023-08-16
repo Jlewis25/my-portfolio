@@ -7,33 +7,20 @@
     * {
       box-sizing: border-box;
     }
-    
-    .rows {
-      vertical-align: bottom; 
-      display: flex;
-      justify-content: center;
+    .rows::after {
+      content: "";
+      clear: both;
+      display: table;
     }
-
-    .robotImgOne {
-      padding: 20px;
+    .robotImg {
+      float: left;
+      width: 25%;
+      padding: 5px;
     }
-    .robotImgTwo {
-      padding: 20px;
-    }
-    .robotImgThree {
-      padding: 20px;
-    }
-    .robotImgFour {
-      padding: 20px;
-    }
-    .HovercraftImgOne {
-      padding: 20px;
-    }
-    .HovercraftImgTwo {
-      padding: 20px;
-    }
-    .HovercraftImgThree {
-      padding: 20px;
+    .HovercraftImg {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
     }
     
     /* Contact Images */
@@ -255,19 +242,19 @@
             <br><br>
             <!-- Picture Format -->
             <div class="rows">
-              <div class="robotImgOne">
+              <div class="robotImg">
                 <img src="portfolioAssets/img/CADClamp.png" alt="CAD Model of Clamp" style="width:100%">
                                                     <!-- Original Image Scaled Down by 3 (870 x 823) to (290 x 274) -->
               </div>
-              <div class="robotImgTwo">
+              <div class="robotImg">
                 <img src="portfolioAssets/img/PrintedClamp.jpg" alt="3D Printed Clamp" style="width:100%">
                                                     <!-- Original Image Scaled Down by 11 (2762 x 2734) to (251 x 249) -->
               </div>
-              <div class="robotImgThree">
+              <div class="robotImg">
                 <img src="portfolioAssets/img/ClampRobot.jpg" alt="Clmap On Robot" style="width:100%">
                                                     <!-- Original Image Scaled Down by 12 (3024 x 4032) to (252 x 336) -->
               </div>
-              <div class="robotImgFour">
+              <div class="robotImg">
                 <img src="portfolioAssets/img/SCRobot.jpg" alt="Robot" style="width:100%">                
                                                     <!-- Original Image Scaled Down by 12 (3024 x 4032) to (252 x 336) -->
               </div>
@@ -345,15 +332,15 @@
               <br><br>
             <!-- Picture Format -->
             <div class="rows">
-              <div class="HovercraftImgOne">
+              <div class="HovercraftImg">
                 <img src="portfolioAssets/img/Hovercraft1.0.jpg" alt="First Hovercraft Prototype">
                                                                 <!-- Original Image Scaled Down by 8 (2956 x 1895) to (370 x 237) -->
               </div>
-              <div class="HovercraftImgTwo">
+              <div class="HovercraftImg">
                 <img src="portfolioAssets/img/HovercraftBottom.jpg" alt="Bottom of Hovercraft">
                                                                 <!-- Original Image Scaled Down by 10 (3024 x 4032) to (302 x 403)-->
               </div>
-              <div class="HovercraftImgThree">
+              <div class="HovercraftImg">
                 <img src="portfolioAssets/img/HovercraftTop.jpg" alt="Final Design of Hovercraft">
                                                                 <!-- Original Image Scaled Down by 7 (2546 x 2528) to (364 x 253) -->
               </div>
