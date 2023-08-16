@@ -12,6 +12,11 @@
       clear: both;
       display: table;
     }
+    .hovercraftRows::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
     .robotImg {
       float: left;
       width: 25%;
@@ -40,23 +45,29 @@
     }
 
     /* Video Formatting */
+    .robotVid::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .hoverVid::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
     .vid{
       float: left;
       width: 100%;
       padding-left: 100px;
       padding-right: 100px;
     }
-    /* Hovercraft Image Formatting */
-    .hovercraftRow {
-      display: flex;
-      vertical-align: bottom;
+    .vidCol{
+      float: left;
+      width: 100%;
+      padding-left: 100px;
+      padding-right: 100px;
     }
 
-    .hovercraftCol {
-      flex: 33.33%;
-      padding: 100px;
-      vertical-align: bottom;
-    }
     /* Text Formatting */
     .text {
       font-size: 20px;
@@ -229,7 +240,7 @@
         </div>
         <div class="row">
           <!-- video formatting -->
-          <div class="rows">
+          <div class="robotRow">
             <div class="vid">
               <video controls loop style="width:100%">
                 <!-- Original Video Size (1920 X 1080) to (640 x 360) -->
@@ -302,7 +313,7 @@
               </span>
               <div class="Btn">
                 <button class="button button2" onclick="myFunction()" id="myBtn">Learn more</button>
-                </div>
+              </div>
               <!-- End Text Formatting -->
             </div>
       </div>
@@ -319,8 +330,8 @@
 
         <div class="row">
           <!-- video formatting -->
-          <div class="rows">
-            <div class="vid">
+          <div class="hoverRow">
+            <div class="vidCol">
               <video controls loop>
                 <!-- Original Video Size (1080 X 1920) to (270 x 480)-->
               <source src="portfolioAssets/img/Hovercraft.mp4" type="video/mp4" style="width:100%">
