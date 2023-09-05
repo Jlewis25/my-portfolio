@@ -16,6 +16,11 @@
       clear: both;
       display: table;
     }
+    .gripperImg {
+      float: left;
+      width: 25%;
+      padding: 20px;
+    }
     .robotImg {
       float: left;
       width: 25%;
@@ -44,6 +49,11 @@
     }
 
     /* Video Formatting */
+    .gripperVid::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
     .robotVid::after {
       content: "";
       clear: both;
@@ -53,6 +63,12 @@
       content: "";
       clear: both;
       display: table;
+    }
+    .vidGripper{
+      float: left;
+      width: 100%;
+      padding-left: 250px;
+      padding-right: 250px;
     }
     .vid{
       float: left;
@@ -76,7 +92,29 @@
       clear: both;
       display: table;
     }
+    
+    /* Learn More Button Styling For Mechanical Gripper*/
+    .button4 {
+      background-color: white;
+      color: black;
+      border: 2px solid #1172e0;
+    }
 
+    .button4:hover {
+      background-color: #1172e0;
+      color: white;
+    }
+
+    #moreGripper {display: none;}
+
+    .BtnGripper{
+      margin: 0;
+      position: absolute;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    
     /* Learn More Button Styling For Stair Climbing Robot*/
     .button {
       border: none;
@@ -209,16 +247,85 @@
         </div>
 
         <div class="row">
+                    <!-- video formatting -->
+          <div class="gripperRow">
+            <div class="vidgripper">
+              <video controls loop style="width:100%">
+                <!-- Original Video Size (1920 X 1080) to (640 x 360) -->
+              <source src="portfolioAssets/img/MechanicalGripper.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+            <br><br>
+            <!-- Picture Format -->
+            <div class="rows">
+              <div class="gripperImg">
+                <img src="portfolioAssets/img/GripperFront.png" alt="CAD Model of Gripper" style="width:100%">
+                                                    <!-- Original Image Scaled Down by 3 (870 x 823) to (290 x 274) -->
+              </div>
+              <div class="gripperImg">
+                <img src="portfolioAssets/img/GripperSide.png" alt="CAD Model of Gripper" style="width:100%">
+                                                    <!-- Original Image Scaled Down by 11 (2762 x 2734) to (251 x 249) -->
+              </div>
+              <div class="gripperImg">
+                <img src="portfolioAssets/img/GripperSection.png" alt="CAD Model of Gripper" style="width:100%">
+                                                    <!-- Original Image Scaled Down by 12 (3024 x 4032) to (252 x 336) -->
+              </div>
+              <div class="gripperImg">
+                <img src="portfolioAssets/img/GripperTransparent.png" alt="CAD Model of Gripper" style="width:100%">                
+                                                    <!-- Original Image Scaled Down by 12 (3024 x 4032) to (252 x 336) -->
+              </div>
+            </div>
+            <!-- End Picture Format -->
+          
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-            <img src="portfolioAssets/img/technology.jfif" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <h3>Coming Soon...</h3>
             <p class="fst-italic">
               <meta name="viewport" content="width=device-width, initial-scale=1">
           </div>
         </div>
 
+                    <!-- Text Formatting -->
+            <div class="clearfix">
+              <p class="text">A team of three mechanical engineering students and I designed, built, programmed, and tested
+                a LEGO EV3 robot to climb stairs. I designed a 3D printed support for the robot using drafting,
+                measuring, and SolidWorks skills. The robot was programmed in RobotC to drive, identify stairs,
+                stabilize, and move the elevator/back stilt vertically to climb stairs. Testing was conducted on
+                various stairs, with the front elevator system occasionally stuck.</p><br>
+              <span id="dotsGripper"></span>
+              <span id="moreGripper">
+              <div class="text">
+                <p>The first approach towards designing our robot was to outline a couple functional requirements, non-
+                  functional requirements, and constraint requirements that our robot had to meet. We then took these
+                  design characteristics and made an engineering design specification which outlined verification methods
+                  and quantified some of the characteristics to ensure they were met. We then created three conceptual
+                  designs and used a decision making matric to decide on the best design.</p>
+              </div>
+              <div class="text">
+                <p>The design chosen included a rear stilt with two wheels which moves vertically by a worm gear, rack and pinion system, a front clamp
+                  with an ultrasonic sensor, a rubber band and string spool elevator system, two drive wheels attached to
+                  the main body, and a gyroscope to help stabilize the robot.The design featured a 3D printed support that secures the back stilt to the main body and ensures the
+                  rack fully engages with the pinion. To design this part, I took measurements of the back stilt and of
+                  various LEGO pieces using a vernier caliper. Then I made some quick sketches to get an idea of what the
+                  part should look like and outlined some of the measurements.</p>
+              </div>
+              <div class="text">
+                  <p> Using the measurements and sketches I 3D modeled the part in SolidWorks and 3D printed it using ABS (Acrylonitrile butadiene styrene)
+                    filament.The robot was programmed in RobotC to drive, sense stairs, stabilize, move the elevator, and back stilt,
+                    and many more functions. We did many phases of testing on different types of stairs with different
+                    heights and surfaces to ensure that the robot could consistently climb stairs. The robot was able to
+                    continuously identify a stair and climb the stair. The robot worked well except for the weak front elevator
+                    system that occasionally got stuck moving up, as the elastic bands lacked the strength to pull the front
+                    clamp up.</p><br>
+              </div>
+              </span>
+              <div class="BtnGripper">
+                <button class="button button4" onclick="myFunctionGripper()" id="myBtnGripper">Learn more</button>
+              </div>
+            </div>
+        <!-- End Text Formatting -->
       </div>
     </section><!-- End Mechanical Gripper Section -->
 
@@ -305,8 +412,8 @@
               <div class="Btn">
                 <button class="button button2" onclick="myFunction()" id="myBtn">Learn more</button>
               </div>
-              <!-- End Text Formatting -->
             </div>
+        <!-- End Text Formatting -->
       </div>
     </section><!-- End Stair Climbing Robot Section -->
 
@@ -463,6 +570,22 @@
   <!-- Template Main JS File -->
   <script src="portfolioAssets/js/main.js"></script>
   <script>
+    //Mechanical Gripper
+    function myFunctionGripper() {
+      var dotsGripper = document.getElementById("dotsGripper");
+      var moreTextGripper = document.getElementById("moreGripper");
+      var btnTextGripper = document.getElementById("myBtnGripper");
+
+      if (dotsGripper.style.display === "none") {
+        dotsGripper.style.display = "inline";
+        btnTextGripper.innerHTML = "Learn more"; 
+        moreTextGripper.style.display = "none";
+      } else {
+        dotsGripper.style.display = "none";
+        btnTextGripper.innerHTML = "Learn less"; 
+        moreTextGripper.style.display = "inline";
+      }
+    }
     //Stair Climbing Robot
     function myFunction() {
       var dots = document.getElementById("dots");
